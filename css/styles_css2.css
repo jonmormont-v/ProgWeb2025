@@ -1,0 +1,16 @@
+body{
+    background-image: url(plitvice.jpg);
+    
+}
+div{
+    background-color:hsla(113, 12%, 85%, 0.637);
+    text-align: center;
+    border: 10px solid #ddb28e;
+    border-radius: 25px;
+    padding: 15px 10px 15px 10px;
+    margin-top: 50px;
+    margin-right: 50%;
+    margin-left: 10%;
+    box-shadow: 1px 1px 4px 1px black,
+    1px 1px 4px 1px black inset ;
+}
