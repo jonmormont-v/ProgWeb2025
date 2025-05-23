@@ -1,5 +1,11 @@
 # 🚀 Space Shooter - Trabalho Prático PW 2025.1
 
+## 👨‍💻 Autor
+
+**Jonathas Monteiro**  
+Aluno da UFAM - Instituto de Computação  
+Disciplina: Programação para Web – 2025.1
+
 Este é um jogo estilo Space Shooter desenvolvido como primeiro trabalho prático da disciplina **Programação para Web (PW)** na **UFAM**, semestre 2025.1.
 
 O jogador controla uma nave que deve defender o espaço contra obstáculos e inimigos variados.
@@ -28,15 +34,10 @@ O jogador controla uma nave que deve defender o espaço contra obstáculos e ini
 - ✅ Game Over após 4ª colisão, com botão de reinício
 - ✅ Remoção automática de inimigos e tiros da DOM
 
+
 ## ⚠️ Importante para Testar o Jogo
 
 Este jogo utiliza módulos JavaScript (`type="module"`), portanto não funciona se aberto diretamente com duplo clique.
-
-## 👨‍💻 Autor
-
-**Jonathas Monteiro**  
-Aluno da UFAM - Instituto de Computação  
-Disciplina: Programação para Web – 2025.1
 
 ### Para testar corretamente:
 
