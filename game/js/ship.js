@@ -18,6 +18,7 @@ class Ship {
     space.element.appendChild(this.element)
     this.dx = 0
     this.damageTimeout = null
+    this.element.id = "ship"
   }
   changeDirection(dx) {
     this.dx = dx
