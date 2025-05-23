@@ -173,7 +173,6 @@ restartButton.addEventListener("click", () => {
 
 
 init()
-setInterval(updateTimer, 1000)
 
 setInterval(() => {
   if (gameStarted && !gamePaused) {
