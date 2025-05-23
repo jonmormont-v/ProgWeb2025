@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="space">
+      <div id="gameOverScreen" style="display: none;">
+        <h1>GAME OVER</h1>
+        <button id="restartButton">Reiniciar</button>
+      </div>
+      <div id="startMessage">Pressione espaço para começar</div>
+      <div id="hud">
+        <span id="lives">
+          <img src="assets/png/life.png" alt="vida" />
+          <img src="assets/png/life.png" alt="vida" />
+          <img src="assets/png/life.png" alt="vida" />
+        </span>
+        <span id="score">000000</span>
+      </div>
+    </div>
+    <script type="module" src="js/game.js"></script>
+  </body>
+
+</html>
