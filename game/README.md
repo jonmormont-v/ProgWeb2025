@@ -47,5 +47,8 @@ OU
 ✅ Rode um servidor local com Python:
 
 ```bash
-python -m http.server 8000
+# Se estiver usando Python 3
+python3 -m http.server 8000
 
+# Ou, se funcionar com python
+python -m http.server 8000
