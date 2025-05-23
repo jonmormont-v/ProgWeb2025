@@ -32,6 +32,12 @@ O jogador controla uma nave que deve defender o espaço contra obstáculos e ini
 
 Este jogo utiliza módulos JavaScript (`type="module"`), portanto não funciona se aberto diretamente com duplo clique.
 
+## 👨‍💻 Autor
+
+**Jonathas Monteiro**  
+Aluno da UFAM - Instituto de Computação  
+Disciplina: Programação para Web – 2025.1
+
 ### Para testar corretamente:
 
 ✅ **Use o Live Server no VS Code**  
@@ -40,11 +46,4 @@ OU
 
 ```bash
 python -m http.server 8000
-
-
-## 👨‍💻 Autor
-
-**Jonathas Monteiro**  
-Aluno da UFAM - Instituto de Computação  
-Disciplina: Programação para Web – 2025.1
 
