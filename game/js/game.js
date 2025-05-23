@@ -30,42 +30,6 @@ function updateLivesDisplay() {
   }
 }
 
-function resetGame() {
-  // Zerar variáveis
-  score = 0
-  scoreElement.textContent = "000000"
-
-  lives = 3
-  updateLivesDisplay()
-
-  elapsedTime = 0
-  timerElement.textContent = "Tempo: 00:00"
-
-  // Resetar nave
-  ship.direction = 1
-  ship.element.src = ship.getCurrentSprite()
-  ship.element.style.left = `${TAMX / 2 - ship.element.offsetWidth / 2}px`
-  ship.element.style.top = "800px"
-
-  // Remover TODOS os elementos dinâmicos do DOM
-  const spaceEl = document.getElementById("space")
-
-  document.querySelectorAll(".enemy, .bullet").forEach(el => el.remove())
-  enemies.length = 0
-
-
-
-  // Esvaziar array de inimigos
-  enemies.length = 0
-
-  // Resetar estados do jogo
-  gameStarted = false
-  gamePaused = false
-
-  // Mostrar instrução inicial
-  const startMessage = document.getElementById("startMessage")
-  if (startMessage) startMessage.style.display = "block"
-}
 
 function gameOver() {
   gameStarted = false
@@ -137,17 +101,20 @@ function init() {
 
 window.addEventListener("keydown", (e) => {
   if (e.key === " ") {
-    if (!gameStarted) {
+    const gameOverVisible = gameOverScreen.style.display === "block"
+    
+    if (!gameStarted && !gameOverVisible) {
       gameStarted = true
       gamePaused = false
       const startMessage = document.getElementById("startMessage")
       if (startMessage) startMessage.style.display = "none"
-    } else {
+    } else if (gameStarted && !gamePaused && !gameOverVisible) {
       const x = ship.element.offsetLeft + ship.element.offsetWidth / 2 - 5
       const y = ship.element.offsetTop
       fireBullet(x, y)
     }
   }
+
 
   if (e.key === "p" || e.key === "P") {
     if (gameStarted) gamePaused = !gamePaused
