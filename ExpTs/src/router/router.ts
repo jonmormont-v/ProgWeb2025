@@ -3,6 +3,7 @@ import { Router } from 'express';
 
 import mainController from '../controllers/main';
 import majorController from '../controllers/major';
+import userController from "../controllers/user";
 // import authController from '../controllers/auth'; // Remova se não for usar nesta etapa!
 
 const router = Router();
@@ -16,6 +17,8 @@ router.get('/hb3', mainController.hb3);
 router.get('/hb4', mainController.hb4);
 router.get('/create-cookie', mainController.createCookie); // (opcional)
 router.get('/uuid', mainController.uuid); // (opcional)
+router.get('/lorem/:qtd', mainController.lorem);
+
 
 // Major Controller (CRUD)
 router.get('/major', majorController.index);
@@ -34,5 +37,15 @@ router.delete('/major/remove/:id', majorController.remove);
 // router.get('/auth/login', authController.login);
 // router.post('/auth/login', authController.login);
 // router.post('/auth/logout', authController.logout);
+
+
+router.get('/user', userController.index);
+router.get('/user/create', userController.create);
+router.post('/user/create', userController.create);
+router.get('/user/read/:id', userController.read);
+router.get('/user/update/:id', userController.update);
+router.post('/user/update/:id', userController.update);
+router.get('/user/remove/:id', userController.remove);
+
 
 export default router;

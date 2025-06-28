@@ -1,0 +1,29 @@
+<h2>Usuários Cadastrados</h2>
+<a href="/user/create" class="btn btn-success mb-3">Novo Usuário</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Major</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+      <td>{{majorId}}</td>
+      <td>
+        <a href="/user/read/{{id}}" class="btn btn-info btn-sm">Ver</a>
+        <a href="/user/update/{{id}}" class="btn btn-warning btn-sm">Editar</a>
+        <a href="/user/remove/{{id}}" class="btn btn-danger btn-sm"
+           onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

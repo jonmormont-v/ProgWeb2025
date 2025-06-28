@@ -7,8 +7,11 @@ import cookieParser from 'cookie-parser';
 import session from "express-session";
 import uuid from "uuid";
 import { v4 as uuidv4} from "uuid";
-
+import { validateEnv } from './utils/validateEnv';
 dotenv.config();
+validateEnv();
+
+
 const app = express();
 const PORT = process.env.PORT ?? 3888;
 
@@ -17,6 +20,9 @@ app.use(cookieParser());
 const genid = (req: Request) => {
   return uuidv4();
 };
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
 
 app.use(
   session({

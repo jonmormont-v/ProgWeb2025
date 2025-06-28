@@ -64,8 +64,9 @@ const lorem = (req: Request, res: Response) => {
   if (isNaN(qtd) || qtd <= 0) {
     return res.status(400).send('O número de parágrafos deve ser um número positivo.');
   }
-  const loremText = generateLoremIpsum(qtd);
-  res.send(loremText);
+  const paragraphs = generateLoremIpsum(qtd);
+  // Renderiza a view handlebars passando os parágrafos
+  res.render("main/lorem", { paragraphs, layout: "main" });
 };
 
 // Criar Cookie (GET /create-cookie)
