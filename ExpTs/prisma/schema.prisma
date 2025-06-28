@@ -22,17 +22,38 @@ model User {
   majorId   String   @db.Char(40)
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  gameSessions GameSession[]  // <<<< Adicione esta linha
+
   @@map("usuarios")
 }
 
-
 model Major {
-  id String @id @default(uuid()) @db.Char(40)
-  name String @unique @db.VarChar(100)
-  code String @unique @db.Char(4)
-  description String @db.Text()
+  id          String   @id @default(uuid()) @db.Char(40)
+  name        String   @unique @db.VarChar(100)
+  code        String   @unique @db.Char(4)
+  description String   @db.Text()
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  users        User[]
+  gameSessions GameSession[]  // <<<< Adicione esta linha
+
+  @@map("majors")
+}
+
+model GameSession {
+  id        String   @id @default(uuid()) @db.Char(40)
+  userId    String   @db.Char(40)
+  majorId   String   @db.Char(40)
+  score     Int?
+  startedAt DateTime @default(now())
+  endedAt   DateTime?
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
-  @@map("majors")
-  User User[]
+
+  user   User  @relation(fields: [userId], references: [id])
+  major  Major @relation(fields: [majorId], references: [id])
+
+  @@map("gamesessions")
 }
