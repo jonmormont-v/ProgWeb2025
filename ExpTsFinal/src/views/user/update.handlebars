@@ -1,0 +1,28 @@
+<h2>Editar Usuário</h2>
+<form action="/user/update/{{user.id}}" method="POST">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nome</label>
+    <input type="text" name="name" id="name" class="form-control" value="{{user.name}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input type="email" name="email" id="email" class="form-control" value="{{user.email}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Senha</label>
+    <input type="password" name="password" id="password" class="form-control" value="{{user.password}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="majorId" class="form-label">Major</label>
+    <select name="majorId" id="majorId" class="form-control" required>
+      <option value="">Selecione um major</option>
+      {{#each majors}}
+        <option value="{{id}}" {{#if (eq id ../user.majorId)}}selected{{/if}}>
+          {{name}} ({{code}})
+        </option>
+      {{/each}}
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+  <a href="/user" class="btn btn-secondary">Cancelar</a>
+</form>

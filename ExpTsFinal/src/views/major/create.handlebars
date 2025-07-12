@@ -1,0 +1,32 @@
+<h3>Criar Curso</h3>
+
+{{! Bloco para exibir a mensagem de erro, se ela existir }}
+{{#if error}}
+  <div class="alert alert-danger" role="alert">
+    {{error}}
+  </div>
+{{/if}}
+
+<div class="col-6">
+  <form action="/major/create" method="post">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nome</label>
+      {{! O 'value' agora retém o que foi digitado anteriormente }}
+      <input type="text" class="form-control" id="name" name="name" value="{{formData.name}}" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="code" class="form-label">Sigla</label>
+      {{! O 'value' também retém a sigla digitada }}
+      <input type="text" class="form-control" id="code" name="code" value="{{formData.code}}" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Descrição</label>
+      {{! Para textareas, o valor fica entre as tags }}
+      <textarea class="form-control" id="description" rows="3" name="description">{{formData.description}}</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>

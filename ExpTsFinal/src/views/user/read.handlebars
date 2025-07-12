@@ -1,0 +1,10 @@
+<h2>Detalhes do Usuário</h2>
+<ul class="list-group">
+  <li class="list-group-item"><strong>ID:</strong> {{user.id}}</li>
+  <li class="list-group-item"><strong>Nome:</strong> {{user.name}}</li>
+  <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
+  <li class="list-group-item"><strong>Major ID:</strong> {{user.majorId}}</li>
+</ul>
+<br>
+<a href="/user/update/{{user.id}}" class="btn btn-warning">Editar</a>
+<a href="/user" class="btn btn-secondary">Voltar</a>

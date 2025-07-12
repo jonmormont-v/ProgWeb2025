@@ -1,0 +1,97 @@
+
+#ship {
+  position: absolute;
+  width: 80px; /* ajuste conforme a imagem */
+}
+
+
+
+.enemy-ship {
+  position: absolute;
+}
+
+#space {
+  background-image: url("../assets/png/Background/starBackground.png");
+  position: relative;
+  overflow: hidden;
+  width: 600px;  /* ou use TAMX */
+  height: 900px; /* ou use TAMY */
+  margin: 0 auto;
+}
+
+#hud {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+
+#score {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px black;
+}
+
+
+#lives img {
+  width: 30px;
+  height: auto;
+}
+
+#startMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  z-index: 150;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+#timer {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  z-index: 100;
+}
+.bullet {
+  width: 10px;
+  height: 20px;
+  z-index: 50;
+}
+
+#gameOverScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  z-index: 200;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+#gameOverScreen button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}

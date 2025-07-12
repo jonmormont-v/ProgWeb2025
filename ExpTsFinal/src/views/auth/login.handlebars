@@ -1,0 +1,14 @@
+<!-- src/views/auth/login.handlebars -->
+<h2>Login</h2>
+<form method="POST" action="/login">
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" required />
+  </div>
+  <div>
+    <label>Senha:</label>
+    <input type="password" name="password" required />
+  </div>
+  {{#if error}}<p style="color:red">{{error}}</p>{{/if}}
+  <button type="submit">Entrar</button>
+</form>

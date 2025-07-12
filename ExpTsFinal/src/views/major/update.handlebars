@@ -1,0 +1,10 @@
+<h1>Editar Major</h1>
+<form action="/major/update/{{major.id}}" method="post">
+  <label>Nome:</label>
+  <input type="text" name="name" value="{{major.name}}" required><br>
+  <label>Código:</label>
+  <input type="text" name="code" value="{{major.code}}" required><br>
+  <label>Descrição:</label>
+  <input type="text" name="description" value="{{major.description}}">
+  <button type="submit">Salvar</button>
+</form>

@@ -1,0 +1,21 @@
+.hb1-message {
+  color: #28a745;
+  font-weight: bold;
+}
+
+html, body { height: 100%; margin: 0; }
+
+body {          /* já é flex-column no markup          */
+  min-height: 100vh;
+}
+
+/* garante que a row dentro de #main-content preencha a altura */
+#main-content > .row {
+  min-height: 100%;
+}
+
+/* evita barras de rolagem internas nas colunas */
+nav.sidebar,
+aside.sidebar {
+  overflow: visible;   /* ou hidden, se preferir */
+}

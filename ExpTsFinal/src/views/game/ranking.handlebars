@@ -1,0 +1,19 @@
+<h2>Ranking dos 10 melhores jogadores</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Posição</th>
+      <th>Nome</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each ranking}}
+    <tr>
+      <td>{{inc @index}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.score}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
